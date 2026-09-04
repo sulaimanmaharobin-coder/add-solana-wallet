@@ -20,14 +20,11 @@ git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.cl
 cd ~/.claude/skills/gstack && ./setup
 ```
 
-Use the /browse skill from gstack for all web browsing; never use
-mcp__claude-in-chrome__* tools. Available skills: /office-hours,
-/plan-ceo-review, /plan-eng-review, /plan-design-review, /design-consultation,
-/design-shotgun, /design-html, /review, /ship, /land-and-deploy, /canary,
-/benchmark, /browse, /connect-chrome, /qa, /qa-only, /design-review,
-/setup-browser-cookies, /setup-deploy, /setup-gbrain, /retro, /investigate,
-/document-release, /document-generate, /codex, /cso, /autoplan,
-/plan-devex-review, /devex-review, /careful, /freeze, /guard, /unfreeze,
-/gstack-upgrade, /learn.
+For web browsing use gstack's /browse skill rather than the Claude-in-Chrome
+MCP tools: gstack's QA, design-review and cookie-setup skills all drive its own
+browse binary, and the Chrome MCP tools are slower and less reliable for that.
+
+The installed gstack skills appear in the session's skill list; the full
+catalog is in ~/.claude/skills/gstack/README.md.
 
 Use ~/.claude/skills/gstack/... for gstack file paths.
