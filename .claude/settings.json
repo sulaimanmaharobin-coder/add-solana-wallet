@@ -1,4 +1,6 @@
 {
+  "model": "claude-fable-5-1",
+  "effortLevel": "medium",
   "hooks": {
     "SessionStart": [
       {
