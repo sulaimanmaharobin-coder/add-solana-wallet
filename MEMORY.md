@@ -8,4 +8,4 @@ Essential facts about the user's workflow. Keep this to items that materially af
 
 ## Claude Code defaults
 
-- Project `.claude/settings.json` in this repo pins `model` to `claude-fable-5-1` and `effortLevel` to `medium`, so sessions here start on Fable 5.1 at medium effort. This overrides the general Sonnet-first habit for this repository.
+- Project `.claude/settings.json` in this repo pins `model` to `claude-opus-5` and `effortLevel` to `high`, so sessions here start on Opus 5 at high effort. This overrides the general Sonnet-first habit for this repository.
