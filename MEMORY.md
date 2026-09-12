@@ -9,3 +9,4 @@ Essential facts about the user's workflow. Keep this to items that materially af
 ## Claude Code defaults
 
 - Project `.claude/settings.json` in this repo pins `model` to `claude-opus-5` and `effortLevel` to `high`, so sessions here start on Opus 5 at high effort. This overrides the general Sonnet-first habit for this repository.
+- The same file sets `env.CLAUDE_CODE_SUBAGENT_MODEL` to `opus`, so subagents spawned in this repo also run on Opus.
