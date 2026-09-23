@@ -5,3 +5,7 @@ Essential facts about the user's workflow. Keep this to items that materially af
 ## Tools
 
 - Uses the **trader-dev MCP server** (HTTP transport, `https://mcp.trader.dev/mcp`), added at user scope on their own machine with `claude mcp add`. The access key lives in the URL query string in the local `~/.claude.json`; never copy the key into files or chat. It is not available inside cloud sessions unless configured through claude.ai connectors or environment settings.
+
+## Billing
+
+- Uses Claude through a **subscription**, not per-token API billing. Context size and background model calls cost usage limits, not money; weigh cost changes against limits.
