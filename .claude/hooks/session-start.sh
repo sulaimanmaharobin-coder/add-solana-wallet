@@ -23,8 +23,10 @@ if [ ! -d "$HOME/.claude/plugins/marketplaces/thedotmack" ]; then
 fi
 
 # Worker autostart is skipped in non-TTY shells, so start it explicitly.
+mem_status="claude-mem installed and its worker is running"
 if ! npx claude-mem start >&2; then
   echo "[session-start] warning: claude-mem worker failed to start" >&2
+  mem_status="claude-mem worker FAILED to start, so its memory tools are unavailable this session"
 fi
 
-echo "Session start hook: npm dependencies installed, Next.js types generated; claude-mem installed and its worker is running."
+echo "Session start hook: npm dependencies installed, Next.js types generated; ${mem_status}."
