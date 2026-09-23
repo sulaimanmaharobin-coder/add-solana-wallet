@@ -9,3 +9,4 @@ Essential facts about the user's workflow. Keep this to items that materially af
 ## Billing
 
 - Uses Claude through a **subscription**, not per-token API billing. Context size and background model calls cost usage limits, not money; weigh cost changes against limits.
+- Chose not to run claude-mem or the document-skills plugin in this repo, to save usage limits. Don't re-add them without asking.
