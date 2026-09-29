@@ -16,7 +16,7 @@ Essential facts about the user's workflow. Keep this to items that materially af
 
 ## Portfolio
 
-- 2026-09-29: decided to rotate all BTC, ETH and other non-ISO coins into XLM, HBAR, ALGO and ADA in three stages; keep XRP; do not buy QNT. The plan is in `plans/iso_rotation_2026-09-29.md` (orders entered by hand in jev-trader). The list of other coins to sell is still to come from the user. Update the routine's HELD list once orders fill.
+- 2026-09-29: decided to rotate all BTC, ETH and other non-ISO coins into XLM, HBAR, ALGO and ADA in three stages; keep XRP; do not buy QNT. The plan is in `plans/iso_rotation_2026-09-29.md` (orders entered by hand in jev-trader). The coins being sold are DOT, WLD, FIL, VET, LINK, AVAX, ETH, BTC, ARB, LTC, SOL and DOGE, about $1.8k in total, so the portfolio is small and fees and order minimums matter more than staging the sells. Update the routine's HELD list once orders fill.
 
 ## Billing
 
