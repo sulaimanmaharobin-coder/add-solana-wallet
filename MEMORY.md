@@ -14,6 +14,10 @@ Essential facts about the user's workflow. Keep this to items that materially af
 - The HELD list (coins excluded from the scan) is typed into the prompt and must be updated by hand when holdings change; last updated 2026-09-29. Cloud sessions cannot read the Crypto.com account.
 - Backtest Aug 2025 to Sep 2026: the gate beat buy-and-hold only by staying out of a falling market; its entries lost money. Treat signals as a watch list, not buys.
 
+## Portfolio
+
+- 2026-09-29: decided to rotate all BTC, ETH and other non-ISO coins into XLM, HBAR, ALGO and ADA in three stages; keep XRP and VET; do not buy QNT. The plan is in `plans/iso_rotation_2026-09-29.md` (orders entered by hand in jev-trader). The coins being sold are DOT, WLD, FIL, LINK, AVAX, ETH, BTC, ARB, LTC, SOL and DOGE, about $1.6k in total, so the portfolio is small and fees and order minimums matter more than staging the sells. Update the routine's HELD list once orders fill.
+
 ## Billing
 
 - Uses Claude through a **subscription**, not per-token API billing. Context size and background model calls cost usage limits, not money; weigh cost changes against limits.
