@@ -1,6 +1,6 @@
 # ISO coin rotation: staged order plan for jev-trader
 
-Drafted 2026-09-29 from Crypto.com Exchange USD tickers and daily candles (prices as of about 10:55 UTC). Enter the orders by hand in jev-trader. Re-check prices before placing anything; levels older than a day should be reset.
+Drafted 2026-09-29 from Crypto.com Exchange USD tickers and daily candles (prices as of about 10:55 UTC). The stage 1 and stage 2 limits were re-priced from live tickers at 22:22 UTC the same day; see "Re-price" below. Enter the orders by hand in jev-trader. Re-check prices before placing anything; levels older than a day should be reset.
 
 ## Decision
 
@@ -46,9 +46,9 @@ ADA 35% ($558), XLM 30% ($479), HBAR 20% ($319), ALGO 15% ($239). The weights fo
 
 | Coin | USD | Limit buy | Approx qty | Good for | Stop (10%) |
 |---|---|---|---|---|---|
-| ADA | $167 | 0.2480 | 673 | 48h | 0.2232 |
-| XLM | $144 | 0.2270 | 634 | 48h | 0.2043 |
-| HBAR | $96 | 0.1150 | 835 | 48h | 0.1035 |
+| ADA | $167 | 0.2445 | 683 | 48h | 0.2200 |
+| XLM | $144 | 0.2235 | 644 | 48h | 0.2011 |
+| HBAR | $96 | 0.1000 | 960 | 48h | 0.0900 |
 | ALGO | $0 | none | | | |
 
 Any stage 1 order not filled after 48h is cancelled, and its cash moves to stage 2. ALGO has no stage 1 order: it failed the scan's entry gate on 28 Sep, so its $72 moved to stage 2.
@@ -57,12 +57,12 @@ Any stage 1 order not filled after 48h is cancelled, and its cash moves to stage
 
 Resting limit orders near the bases each coin formed before the 28 Sep jump. They are valid for 7 days.
 
-| Coin | USD | Limit buy | Approx qty | Below last | Stop (10%) |
+| Coin | USD | Limit buy | Approx qty | Below last (22:22 UTC) | Stop (10%) |
 |---|---|---|---|---|---|
-| ADA | $223 | 0.2380 | 937 | -5% | 0.2142 |
-| XLM | $192 | 0.2150 | 893 | -6% | 0.1935 |
-| HBAR | $128 | 0.1000 | 1,280 | -15% | 0.0900 |
-| ALGO | $168 | 0.1200 | 1,400 | -9% | 0.1080 |
+| ADA | $223 | 0.2380 | 937 | -3% | 0.2142 |
+| XLM | $192 | 0.2150 | 893 | -4% | 0.1935 |
+| HBAR | $128 | 0.0950 | 1,347 | -8% | 0.0855 |
+| ALGO | $168 | 0.1200 | 1,400 | -4% | 0.1080 |
 
 If a stage 2 order has not filled by day 7, cancel it and keep that cash in USD. Do not chase.
 
@@ -121,8 +121,21 @@ What this means:
 Changes:
 
 1. Applied: ALGO's stage 1 amount ($72) moved into its stage 2 order at 0.1200, so all ALGO buys except stage 3 wait for a pullback.
-2. Leave XLM's stage 1 order as it is. It passes the gate, and the 0.2270 limit is already below the last price.
-3. Re-check the stage 1 limits against live prices before placing them. The levels here date from 10:55 UTC.
+2. Superseded by the re-price below: XLM's stage 1 limit moved from 0.2270 to 0.2235 once the price fell under 0.2270.
+3. Applied: stage 1 and stage 2 limits re-checked against live prices at 22:22 UTC (see below).
+
+## Re-price (2026-09-29, 22:22 UTC)
+
+By late on 29 Sep the 28 Sep spike was reversing. HBAR was down 16% on the day at 0.1029, its daily low. ALGO was down 8% at 0.1249. ADA (0.2447) and XLM (0.2237) were roughly flat. QNT was at $254, far above the $150 kill switch. All of the original stage 1 limits sat above the market, so they would have filled at once, and HBAR would have been bought while still falling.
+
+| Coin | Stage | Was | Now | Why |
+|---|---|---|---|---|
+| ADA | 1 | 0.2480, stop 0.2232 | 0.2445, stop 0.2200 | Just under the 0.2447 bid |
+| XLM | 1 | 0.2270, stop 0.2043 | 0.2235, stop 0.2011 | Just under the 0.2236 bid |
+| HBAR | 1 | 0.1150, stop 0.1035 | 0.1000, stop 0.0900 | Price fell to the old stage 2 level; don't buy a falling coin at market |
+| HBAR | 2 | 0.1000, stop 0.0900 | 0.0950, stop 0.0855 | Top of the 0.092 to 0.096 range it held before the spike |
+
+USD amounts are unchanged. The 11 coins being sold have also moved since 10:55 UTC, so scale the buys to the cash the sells actually return. ALGO keeps no stage 1 order (change 1 above). Its stage 2 order at 0.1200 is 4% under the 22:22 UTC price and stays as it is. Stage 3 triggers are unchanged.
 
 ## After fills
 
