@@ -5,6 +5,7 @@ Essential facts about the user's workflow. Keep this to items that materially af
 ## Tools
 
 - Uses the **trader-dev MCP server** (HTTP transport, `https://mcp.trader.dev/mcp`), added at user scope on their own machine with `claude mcp add`. The access key lives in the URL query string in the local `~/.claude.json`; never copy the key into files or chat. It is not available inside cloud sessions unless configured through claude.ai connectors or environment settings.
+- 2026-09-29: wants jev-trader usable from the phone both ways: (1) live laptop session via Remote Control (`claude remote-control` in the jev-trader folder, then the phone's Code tab), and (2) laptop-off use, which needs trader-dev added as a claude.ai connector at https://claude.ai/customize/connectors (connectors load at session start). The pairing must be done on the laptop and phone; cloud sessions cannot do it.
 - Uses Claude Code with the **tradingview-mcp** server (own fork, `sulaimanmaharobin-coder/tradingview-mcp`) on **Claude Opus 5.5**.
 
 ## Breakout scan routine
