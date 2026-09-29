@@ -7,6 +7,13 @@ Essential facts about the user's workflow. Keep this to items that materially af
 - Uses the **trader-dev MCP server** (HTTP transport, `https://mcp.trader.dev/mcp`), added at user scope on their own machine with `claude mcp add`. The access key lives in the URL query string in the local `~/.claude.json`; never copy the key into files or chat. It is not available inside cloud sessions unless configured through claude.ai connectors or environment settings.
 - Uses Claude Code with the **tradingview-mcp** server (own fork, `sulaimanmaharobin-coder/tradingview-mcp`) on **Claude Opus 5.5**.
 
+## Breakout scan routine
+
+- Daily cloud routine "Daily breakout scan" (`trig_01PCYjwopUp9Th5xYTqP6v9x`) runs at 08:10 SGT in a fresh session: EMA 20/50 scan of Crypto.com Exchange USD pairs, publishes a private "Breakout Scan <date>" artifact and pushes the TL;DR. The prompt is self-contained; change it with `update_trigger`.
+- Current rules: 14-day range cap 50% for FRESH-CROSS/IN-TREND, default stop 10%. The real stop is set in jev-trader on the user's laptop, not in the routine.
+- The HELD list (coins excluded from the scan) is typed into the prompt and must be updated by hand when holdings change; last updated 2026-09-29. Cloud sessions cannot read the Crypto.com account.
+- Backtest Aug 2025 to Sep 2026: the gate beat buy-and-hold only by staying out of a falling market; its entries lost money. Treat signals as a watch list, not buys.
+
 ## Billing
 
 - Uses Claude through a **subscription**, not per-token API billing. Context size and background model calls cost usage limits, not money; weigh cost changes against limits.
