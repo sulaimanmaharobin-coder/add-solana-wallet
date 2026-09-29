@@ -9,7 +9,7 @@ Essential facts about the user's workflow. Keep this to items that materially af
 
 ## Breakout scan routine
 
-- Daily cloud routine "Daily breakout scan" (`trig_01DoUfazaoatNMDFfD7zuoQh`) runs at 08:10 SGT in a fresh session: EMA 20/50 scan of Crypto.com Exchange USD pairs, publishes a private "Breakout Scan <date>" artifact and sends the TL;DR through the routine's completion push. Routine sessions have no push tool, so the run's final reply is the push text; don't ask the run to send a push itself. The prompt is self-contained; change it with `update_trigger`.
+- Daily cloud routine "Daily breakout scan" (`trig_01DoUfazaoatNMDFfD7zuoQh`) runs at 08:10 SGT in a fresh session: EMA 20/50 scan of Crypto.com Exchange USD pairs, publishes a private "Breakout Scan <date>" artifact and sends the TL;DR through the routine's completion push. Routine sessions have no push tool, so the run's final reply is the push text; don't ask the run to send a push itself. The prompt is self-contained and its source is `routines/breakout_scan_prompt.md`; when changing it, edit that file and push the same text to the routine with `update_trigger`.
 - Current rules: 14-day range cap 50% for FRESH-CROSS/IN-TREND, default stop 10%. The real stop is set in jev-trader on the user's laptop, not in the routine.
 - The HELD list (coins excluded from the scan) is typed into the prompt and must be updated by hand when holdings change; last updated 2026-09-29. Cloud sessions cannot read the Crypto.com account.
 - Backtest Aug 2025 to Sep 2026: the gate beat buy-and-hold only by staying out of a falling market; its entries lost money. Treat signals as a watch list, not buys.
