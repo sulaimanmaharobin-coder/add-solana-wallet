@@ -42,18 +42,18 @@ LINK (+10%) and AVAX (+10%) are up on the day, so these sells are into strength.
 
 ADA 35% ($558), XLM 30% ($479), HBAR 20% ($319), ALGO 15% ($239). The weights follow liquidity and how stretched each coin is.
 
-## Stage 1: day 1, after the sells ($479, 30%)
+## Stage 1: day 1, after the sells ($407, 26%)
 
 | Coin | USD | Limit buy | Approx qty | Good for | Stop (10%) |
 |---|---|---|---|---|---|
 | ADA | $167 | 0.2480 | 673 | 48h | 0.2232 |
 | XLM | $144 | 0.2270 | 634 | 48h | 0.2043 |
 | HBAR | $96 | 0.1150 | 835 | 48h | 0.1035 |
-| ALGO | $72 | 0.1300 | 554 | 48h | 0.1170 |
+| ALGO | $0 | none | | | |
 
-Any stage 1 order not filled after 48h is cancelled, and its cash moves to stage 2.
+Any stage 1 order not filled after 48h is cancelled, and its cash moves to stage 2. ALGO has no stage 1 order: it failed the scan's entry gate on 28 Sep, so its $72 moved to stage 2.
 
-## Stage 2: pullback buys, placed day 1 ($639, 40%)
+## Stage 2: pullback buys, placed day 1 ($711, 45%)
 
 Resting limit orders near the bases each coin formed before the 28 Sep jump. They are valid for 7 days.
 
@@ -62,7 +62,7 @@ Resting limit orders near the bases each coin formed before the 28 Sep jump. The
 | ADA | $223 | 0.2380 | 937 | -5% | 0.2142 |
 | XLM | $192 | 0.2150 | 893 | -6% | 0.1935 |
 | HBAR | $128 | 0.1000 | 1,280 | -15% | 0.0900 |
-| ALGO | $96 | 0.1200 | 800 | -9% | 0.1080 |
+| ALGO | $168 | 0.1200 | 1,400 | -9% | 0.1080 |
 
 If a stage 2 order has not filled by day 7, cancel it and keep that cash in USD. Do not chase.
 
@@ -85,7 +85,7 @@ If QNT closes a day below $150 (about half of its spike), treat the ISO story as
 
 ## Scan check (added 2026-09-29, daily close of 28 Sep UTC)
 
-Breakout scan run at 13:26 UTC, page "Breakout Scan 2026-09-28". The XLM and ALGO rows come from an earlier run on the same close, before they were added to the HELD list. ADA and HBAR were already held, so no scan covers them. The order tables above are unchanged; the suggested changes at the end of this section are not applied.
+Breakout scan run at 13:26 UTC, page "Breakout Scan 2026-09-28". The XLM and ALGO rows come from an earlier run on the same close, before they were added to the HELD list. ADA and HBAR were already held, so no scan covers them. Change 1 below was applied to the stage 1 and stage 2 tables on 2026-09-29.
 
 Sell side. Every coin being sold is in an EMA uptrend. None is breaking down, so there is no reason to rush the sells, and none to hold them back.
 
@@ -114,13 +114,13 @@ What this means:
 
 - The rotation swaps coins in healthy trends for coins that have already run. That does not overturn the ISO decision, which was not made on trend, but it means buying at market on day 1 carries the most timing risk.
 - XLM passes the entry gate. It is a later entry into an existing trend, not a fresh one.
-- ALGO fails the gate on both the 7-day move (+21%) and the 14-day range (53%, on closes). Its stage 1 limit of 0.1300 is only about 1% under the 0.1315 last price, so stage 1 is effectively buying the spike.
+- ALGO fails the gate on both the 7-day move (+21%) and the 14-day range (53%, on closes). Its original stage 1 limit of 0.1300 was only about 1% under the 0.1315 last price, so that order would have bought the spike.
 - LINK is the strongest of the coins being sold (+10.1% on the day, 65% above SMA200). Selling it at the bid today is selling into strength, as the plan already notes.
 - The backtest columns rest on 1 to 6 trades per coin. Treat them as context only.
 
-Suggested changes (not applied; decide before placing orders):
+Changes:
 
-1. Move ALGO's stage 1 amount ($72) into its stage 2 order at 0.1200, so all ALGO buys except stage 3 wait for a pullback.
+1. Applied: ALGO's stage 1 amount ($72) moved into its stage 2 order at 0.1200, so all ALGO buys except stage 3 wait for a pullback.
 2. Leave XLM's stage 1 order as it is. It passes the gate, and the 0.2270 limit is already below the last price.
 3. Re-check the stage 1 limits against live prices before placing them. The levels here date from 10:55 UTC.
 
