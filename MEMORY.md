@@ -18,6 +18,8 @@ Essential facts about the user's workflow. Keep this to items that materially af
 ## Portfolio
 
 - 2026-09-29: decided to rotate all BTC, ETH and other non-ISO coins into XLM, HBAR, ALGO and ADA in three stages; keep XRP and VET; do not buy QNT. The plan is in `plans/iso_rotation_2026-09-29.md` (orders entered by hand in jev-trader). The coins being sold are DOT, WLD, FIL, LINK, AVAX, ETH, BTC, ARB, LTC, SOL and DOGE, about $1.6k in total, so the portfolio is small and fees and order minimums matter more than staging the sells.
+- 2026-09-29: ALGO failed the scan's entry gate (CHASING: 7d +21%, 14d range 53%), so there is no ALGO buy in stage 1. Its $72 moved into the stage 2 pullback order at 0.1200 ($168 in total, stop 0.1080). ALGO is bought only on a pullback within 7 days or a close above 0.1405 within 14 days; otherwise its $239 stays in USD.
+
 ## Billing
 
 - Uses Claude through a **subscription**, not per-token API billing. Context size and background model calls cost usage limits, not money; weigh cost changes against limits.
