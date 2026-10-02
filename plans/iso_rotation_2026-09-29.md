@@ -1,5 +1,7 @@
 # ISO coin rotation: staged order plan for jev-trader
 
+**Status (2026-10-02): finished. Stage 2 and stage 3 are closed.** The ALGO stage 2 order filled at about 8,686 ALGO (about $1,042, roughly six times its planned $168), which used almost all the free USD. With no cash left, the remaining stage 2 orders (ADA, XLM, HBAR) and all of stage 3 cannot be funded. Holdings that day: XRP 1,500 ($2,237, 39%), XLM 4,975 ($1,082, 19%), ALGO 8,693 ($1,064, 19%), HBAR 10,236 ($1,047, 18%), VET 25,243 ($221, 4%), ADA 348 ($85, 1.5%). The tables below are kept as the original plan.
+
 Drafted 2026-09-29 from Crypto.com Exchange USD tickers and daily candles (prices as of about 10:55 UTC). The stage 1 and stage 2 limits were re-priced from live tickers at 22:22 UTC the same day; see "Re-price" below. Enter the orders by hand in jev-trader. Re-check prices before placing anything; levels older than a day should be reset.
 
 ## Decision
