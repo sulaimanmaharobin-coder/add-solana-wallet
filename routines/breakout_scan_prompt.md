@@ -19,7 +19,7 @@ def get(method, **params):
             if attempt == 2: raise RuntimeError(f'{method} {params}: {e}')
             time.sleep(2)
 # Coins the operator already holds (updated 2026-10-02 SGT; may be stale) and stablecoins: left out.
-HELD = {'XRP','VET','XLM','HBAR','ADA'}
+HELD = {'XRP','VET','XLM','HBAR','ALGO','ADA'}
 RANGE_CAP = 0.50  # max 14-day high/low range (closes) for FRESH-CROSS and IN-TREND
 SKIP = {'USDT','USDC','DAI','PYUSD','FDUSD','TUSD','USD1','RLUSD','EURC','USDE','PAXG','XAUT','USAT'}
 def ema(xs, n):
