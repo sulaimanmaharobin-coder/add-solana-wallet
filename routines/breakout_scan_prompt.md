@@ -18,8 +18,8 @@ def get(method, **params):
         except Exception as e:
             if attempt == 2: raise RuntimeError(f'{method} {params}: {e}')
             time.sleep(2)
-# Coins the operator already holds (updated 2026-09-29 SGT; may be stale) and stablecoins: left out.
-HELD = {'XRP','VET','XLM','HBAR','ALGO','ADA'}
+# Coins the operator already holds (updated 2026-10-02 SGT; may be stale) and stablecoins: left out.
+HELD = {'XRP','VET','XLM','HBAR','ADA'}
 RANGE_CAP = 0.50  # max 14-day high/low range (closes) for FRESH-CROSS and IN-TREND
 SKIP = {'USDT','USDC','DAI','PYUSD','FDUSD','TUSD','USD1','RLUSD','EURC','USDE','PAXG','XAUT','USAT'}
 def ema(xs, n):
@@ -83,6 +83,6 @@ STEP 2. Publish ONE new private Artifact page (use the Artifact tool; quickstart
 - If there is at least one FRESH-CROSS coin, a line under the TL;DR: 'To act on one: tell Claude on the laptop "add <COIN>" (default $150, 10% stop). Claude re-checks the rules and creates a buy proposal; nothing is bought until you say "approve".' Never add this line for QUIET-SETUP coins.
 - One section per label in the order FRESH-CROSS, NEAR-CROSS, IN-TREND, CHASING, each a table with: Coin | EMA gap % | Last cross (days ago) | vs SMA200 % | 24h % | 7d % | 14d range % | Spread bps | 24h vol $K | EMA rule vs hold % (trades). Write 'none' for an empty section.
 - Then a QUIET-SETUP (watch only) section, table: Coin | EMA gap % | vs SMA200 % | 14d range % | 7d % | Vol 7d vs 30d (x) | Spread bps | 24h vol $K. Mark rows with 24h vol under $100K or spread over 25 bps as 'thin'. Write 'none' if empty.
-- Footer: 'Research only, not advice. Closed UTC daily candles from the Crypto.com Exchange public API. The backtest column covers up to ~8 months (fewer for newer coins) and usually only a few trades per coin: context, not proof. QUIET-SETUP is a watch list built from one past example (QNT); it is not a buy signal. Held coins are excluded; that list was last updated 2026-09-29 and may be stale.' If 'skipped' is not empty, add: 'Skipped after API errors: <coins>.'
+- Footer: 'Research only, not advice. Closed UTC daily candles from the Crypto.com Exchange public API. The backtest column covers up to ~8 months (fewer for newer coins) and usually only a few trades per coin: context, not proof. QUIET-SETUP is a watch list built from one past example (QNT); it is not a buy signal. Held coins are excluded; that list was last updated 2026-10-02 and may be stale.' If 'skipped' is not empty, add: 'Skipped after API errors: <coins>.'
 
 STEP 3. Do not try to send a push notification yourself; this routine's completion notification delivers your final reply to the operator's phone. Make your final reply short plain text. If there is a FRESH-CROSS coin: 'Fresh up-cross: <coins>. To buy, tell Claude "add <first coin>" and approve the proposal. <page link>'. Otherwise: the TL;DR line and the page link. If the scan failed, say so in one line with the error and the page link.
